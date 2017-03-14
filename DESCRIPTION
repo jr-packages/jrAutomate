@@ -1,0 +1,22 @@
+Package: jrShiny
+Type: Package
+Title: R Shiny Exercises
+Version: 0.1.0
+Authors@R: person(given="Colin", family="Gillespie",
+    email="csgillespie@gmail.com", role = c("aut", "cre"))
+Maintainer: Colin Gillespie <csgillespie@gmail.com>
+Description: Functions and exercises for R courses. This package was initially
+    based on the reportsWS package by RStudio.
+Depends:
+    R (>= 3.3)
+Imports: utils, ggplot2movies, drat
+Suggests:
+    knitr,
+    shiny, formattable, edgebundleR, DT,d3heatmap,networkD3, 
+    ggplot2, gridSVG, svgPanZoom,svglite, MASS, htmlwidgets, ggiraph, 
+    sparkline, rmarkdown, flexdashboard,plotly,dygraphs, rsconnect, revealjs
+License: CC0
+LazyData: TRUE
+VignetteBuilder: knitr
+Repository: jr-packages
+RoxygenNote: 6.0.1
