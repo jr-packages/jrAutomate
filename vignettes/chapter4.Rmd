@@ -1,6 +1,6 @@
 ---
 title: "Chapter 4 Exercises"
-author: "Colin Gillespie"
+author: "Jumping Rivers"
 output: html_vignette
 ---
 <!--
@@ -14,147 +14,119 @@ library("shiny")
 library("flexdashboard")
 ```
 
-## Exercise 1 (5 minutes)
+## Exercise 1
 
-  * Go to the [What's in a name](https://gallery.shinyapps.io/names-app/name-app.Rmd) app.
-  * Which elements of the plot are are shiny and which are htmlwidgets?
-  * What are the inputs? What are the outputs?
-
-## Exercise 2 (5 minutes)
-
-  * Open `chapter4/shiny2.Rmd` and run the script. 
-  * Look at the other [online widgets](http://shiny.rstudio.com/gallery/widget-gallery.html)
-  * Add as many shiny widgets as you can to your document in the next 5 minutes.
-  
-## Exercise 3 (5 minutes)
-  
-  * Open `chapter4/shiny3.Rmd` and run. 
-  * Include the line
-    ```{r eval=FALSE}
-    ## Arguments: id, code to execute on the server
-    observeEvent(input$n, {print(input$n)}) 
-    ```
-    and look at the `R Markdown` tab. 
-  * Try a different shiny widget.
-  
-## Exercise 4 (5 minutes)
-
-  * Open `chapter4/shiny4a.Rmd` and run. 
-    * Add a second slider and display the sum of both sliders.
-    * Let the slider determine the value of `n` in an `rnorm` call, i.e. `rnorm(input$n)`. Using
-    `renderPlot`, generate a scatter plot of random numbers where the sample size is determined by 
-    a slider.
-  * Open `chapter4/shiny4b.Rmd` and run. 
-    * Create another `sliderInput` widget to control the mean value used in the `rnorm` function call, i.e.
+  * Create a R markdown document with a standard YAML header. 
+    * In the main part of the document, have some R code that creates a simple
+    scatter plot and saves the resulting plot as a pdf file,e.g. 
         ```{r eval=FALSE}
-        ## input$mean comes from a second slider
-        rnorm(input$n, input$mean)
+        x = rnorm(10)
+        plot(x)
+        pdf("fileA.pdf")
+        plot(x)
+        dev.off()
         ```
-    * Add in a `selectInput` widget to switch between generating random numbers from 
-    a normal distribution and a uniform distribution.  
-    * Add `renderText(input$n)` to the script to print the value  of `input$n`.
-    * Instead of printing `input$n`, print out the largest value in the sample.
-        * Do you see a problem?
-
-## Exercise 5
-
-  * Open `chapter4/shiny5.Rmd` and run. 
-  * Fix the syncing problem between the plot and the text by using the `reactive` function.
-  * Add in a `selectInput` widget to switch between generating random numbers from a normal distribution
-  and a uniform distribution.
+  * Now in the YAML section, add a parameter called `filename` with the value `file1.pdf`
+  * In the main part of the document, access the parameter via `params$filename`
+  * Instead of `fileA.pdf`, pass the parameter from the YAML header
+    * Your R markdown document should display the scatter plot __and__ save the plot
+    in a file called `file1.pdf`
     
-## Exercise 6
+## Exercise 2
 
-  * Open `chapter4/shiny6.Rmd` and run. 
-  * Using `eventReactive`, only redraw the graph and calculate the maximum value when the `Plot it` button is pressed.
-  * Change `actionButton` to `actionLink`
+  * Copy your previous Rmd file, but delete the `params` section from the YAML header
+  * Pass the `filename` parameter via the `render()` function
+    ```{r, eval=FALSE}
+    rmarkdown::render("MyDocument.Rmd", 
+	    params = list(
+		  filename = "file2.pdf"
+	   )
+    )
+    ```
+  * Check that you have created `file2.pdf`
+
+## Exercise 3
+
+Unfortunately, to run scheduler tasks it depends on 
+
+ * Your operating system
+ * The requirement for admin privilages
+ 
+This means it's hard to get an exercise that will suit everyone. To get the
+general idea across I've created a simple function called `scheduler()`. 
+
+When we run the same script multiple times, there are two possibilities:
+
+  * We constantly overwrite the previous output (this is straightforward)
+  * We dynamically create file names so we have a record. This is what we'll do 
+  in the tasks below.
   
-## Exercise 7
+### Task 1
 
-  * Open `chapter4/shiny7.Rmd` and run. 
-  * Using `reactiveValues` and `observeEvents` to only redraw the plot when a button is clicked.
+Create a standard Rmd file (don't worry about `params`). In the body of the document
+include
+```{r eval=FALSE}
+x = rnorm(10)
+plot(x)
+pdf("fileA.pdf")
+plot(x)
+dev.off()
+```
+We want to change `fileA.pdf` to be unique. The easiest way is to use current time.
+In R we have
+```{r}
+Sys.Date()
+Sys.time()
+```
+In this exercise we'll use `Sys.time()`, but you may find `Sys.Date()` more suitable in general.
+We need to convert the time to a file name. First convert it to a character
 
-----
+```{r}
+fname = as.character(Sys.time())
+```
 
-## Further Reading
+Then add on a `pdf` file extension using the `paste0()` function
 
-When I was developing this tutorial, I created a couple of simple examples to illustrate different
-shiny components. These examples are found in `chapter4/` and the files start with `Why_`.
+```{r}
+fname = paste0(as.character(Sys.time()), ".pdf")
+```
+Now change `fileA.pdf` to use fname. Run your script and ensure that it works.
 
+### Task 2
 
+The `scheduler()` function is simple. It has three arguments:
 
+  * `rmd_name`: The name of `Rmd` script you want to generate
+  * `repeats`: How often should we run the script (from now)
+  * `time_between`: The time between script calls
 
+```{r, eval=FALSE}
+library(jrShiny)
+## time_between is in seconds
+scheduler(script_name = "my_script.Rmd", repeats = 5, time_between = 5) 
+```
 
-
-
-
-
-
-<!-- ## Exercise 1 -->
-
-<!-- Copy the [simple_shiny](simple_shiny.Rmd) file to RStudio and knit.  -->
-
-<!-- 1. The `sliderInput` functions control the year selection. Change the `min`, `max`, `step` and `value` arguments. -->
-<!-- 1. The `selectInput` function highlights the points. Look at the `colnames(movies)` and add -->
-<!-- a few more options. -->
-<!-- 1. The first arguments of `sliderInput` and `selectInput` are unique ids. Look at the plotting code -->
-<!-- and see how they interact. -->
-<!-- 1. Add another `sliderInput` that controls the maximum value to display on the `y`-axis.  -->
-
-<!-- ## Exercise 2 -->
-
-<!-- Re-copy the [simple_shiny](simple_shiny.Rmd) file to RStudio. -->
-
-<!--  * Run  -->
-<!--     ```{r results="hide"} -->
-<!--     sliderInput("min_year", label = "Minimum year:", min=1930, max=2010, step=10, value=1930, sep="") -->
-<!--     ``` -->
-<!--     in your console and examine the output. Try changing `min` and `max`. Re examine the output. -->
-
-<!--   * Go to the shiny widgets [gallery](http://shiny.rstudio.com/gallery/widget-gallery.html) and -->
-<!--   experiment with a few of the widgets. -->
-<!--   * Change the `selectInput` widget to `radioButtons`. Hint: Look at the example in the `radioButton` help page -->
-
-<!-- ## Exercise 3 -->
-
-<!-- Re-copy the [simple_shiny](simple_shiny.Rmd) file to RStudio. -->
-
-<!--   * Open the [shiny components](shiny_components.Rmd) and knit -->
-<!--   * Change the scatter plot in the shiny app, to a histogram that displays movie `Rating`.  -->
-<!--   The drop-down menu should now select the type of movies displayed, e.g.  -->
-<!--   if `Action` is selected, only `Action` movies as displayed in the histogram. -->
-
-<!--   * Create another pane in the shiny app. Use `renderText` to display the total number of movies in the histogram. -->
-<!--   * __Harder__: Add an interactive [value boxes]{http://rmarkdown.rstudio.com/flexdashboard/using.html#value_boxes}. Select -->
-<!--   a suitable icon from [ionicons](http://ionicons.com/) -->
+Using the `schedular()` function, run your `Rmd` file 5 times with a 3 second interval.
 
 
-<!-- ### Further examples -->
+### Handy functions for file manipulation
 
-<!--  * [Biclust](https://jjallaire.shinyapps.io/shiny-biclust/) -->
-<!--  * [crandash](https://jjallaire.shinyapps.io/shiny-crandash/) -->
-<!--  * [Brushing](https://jjallaire.shinyapps.io/shiny-ggplot2-brushing/) -->
-<!--  * [kmeans](https://jjallaire.shinyapps.io/shiny-kmeans/) -->
-<!--  * [diamonds](https://jjallaire.shinyapps.io/shiny-ggplot2-diamonds/) -->
+Function name | Description
+--------------|------------
+`dir.create()` | Creates a new directory
+`dir.exists()` | Checks a directory exists
+`file.create()` | Creates a new file
+`file.exists()` | Checks a file exists
+`file.remove()` | Removes a file
+`file.info()` | Size, creation date, etc.
 
 
-<!-- ## Exercise 4 -->
 
-<!--   * Add the drop down menu button -->
-<!--   ```{r results="hide"} -->
-<!--   selectInput("mpaa", label = "MPAA", c("R", "PG-13", "PG", "NC-17")) -->
-<!--   ``` -->
-<!--   to the side bar. When a mpaa rating is changed, the plots should be updated. -->
-<!--   * Include an additional term  - `all` - to indicate that all ratings should be displayed. -->
 
-<!-- ## Exercise 5 -->
 
-<!--   * Update the other pages of the [shiny components](shiny_components.Rmd) file to use \cc{reactive}  -->
-<!--   expressions. -->
 
-<!-- ## Exercise 6 -->
 
-<!--   * Make pages 2 & 3 of the [shiny components](shiny_components_reactive_isolate.Rmd) use `isolate`. -->
+
 
 
 

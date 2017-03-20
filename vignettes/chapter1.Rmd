@@ -1,6 +1,6 @@
 ---
 title: "Chapter 1 Exercises"
-author: "Colin Gillespie"
+author: "Jumping Rivers"
 output: html_vignette
 ---
 <!--
@@ -23,7 +23,7 @@ library("jrShiny")
 
 ## Exercise 2 (8 minutes)
 
-  * Open `exercises/chapter2/rmarkdown3.Rmd`. Click `Knit HTML`
+  * Open `exercises/chapter1/rmarkdown2.Rmd`. Click `Knit HTML`
   * Complete the instructions in the file
   
 ## Exercise 3 (15 minutes)
@@ -32,11 +32,10 @@ library("jrShiny")
   * We can change how the slides are displayed:
     * Swap `output: ioslides_presentation` to `output:slidy_presentation` to re-knit
     * Install the `reveal.js` package
-    ```{r eval=FALSE}
-    ## Hope this should work!
-    install.packages("revealjs")
-    ```
-    and change to `output: revealjs::revealjs_presentation`. On my machine, I had to view the
+        ```{r eval=FALSE}
+        install.packages("revealjs")
+        ```
+    and change te output format to `output: revealjs::revealjs_presentation`. On my machine, I had to view the
     presentation in a browser on full-screen mode. More details are available at 
     the [RStudio](http://rmarkdown.rstudio.com/revealjs_presentation_format.html) web-page.
   * Change the slides to use your data.

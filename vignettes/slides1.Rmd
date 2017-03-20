@@ -37,13 +37,9 @@ install.packages("jrShiny", dependencies = TRUE)
 
 ## Slides 
 
-All (except chapter 4) are in the package
+All slides and exercises are in the package
 ```{r eval=FALSE}
 vignettes("slides1", package="jrShiny")
-```
-All in the package
-
-```{r eval=FALSE}
 vignettes("chapter1", package="jrShiny")
 ```
 
@@ -74,7 +70,7 @@ All R markdown files start with a header
 ---
 title: "My title"
 author: "Me"
-date: "01 June 2016"
+date: "01 June 2020"
 output: html_document
 ---
 ```

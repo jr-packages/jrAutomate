@@ -3,6 +3,7 @@
 export(create_project)
 export(exercise)
 export(layout_show)
+export(scheduler)
 export(setnicepar)
 export(solution)
 import(ggplot2movies)

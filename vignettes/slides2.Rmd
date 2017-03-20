@@ -29,7 +29,7 @@ plot_ly(data=df, x = ~x, y = ~y, z = ~z, color = ~time, type = "scatter3d")
 ```
 
 ## htmlwidgets
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE}
 library(plotly)
 data("diamonds", package="ggplot2")
 d <- diamonds[sample(nrow(diamonds), 500), ]
