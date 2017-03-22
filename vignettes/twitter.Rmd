@@ -1,0 +1,48 @@
+---
+title: "Twitter"
+author: "Jumping Rivers"
+output: html_vignette
+---
+<!--
+%\VignetteEngine{knitr::rmarkdown}
+%\VignetteIndexEntry{Twitter}
+-->
+
+## Accessing twitter from the command line
+
+An easy way of determining when your job/script has finished, is to use twitter;
+at the end of your job, you send a tweet!
+
+The package for accessing the twitter API is [rtweet](https://github.com/mkearney/rtweet).
+This replaces the older **twitteR** client. 
+
+1. Install the package - `install.packages("rtweet")`
+1. In order to programmatically access twitter, you need to set up an app. This
+is described in great detail in the [vignette](https://mkearney.github.io/rtweet/articles/auth.html)
+
+1. Next you create a token:
+
+    ```{r eval=FALSE}
+    library(rtweet)
+    ## name assigned to created app
+    appname <- "rtweet_token"
+    ## api key (example below is not a real key)
+    key <- "XYznzPFOFZR2a39FwWKN1Jp41"
+    ## api secret (example below is not a real key)
+    secret <- "CtkGEWmSevZqJuKl6HHrBxbCybxI1xGLqrD5ynPd9jG0SoHZbD"
+    twitter_token <- create_token(
+      app = appname,
+      consumer_key = key,
+      consumer_secret = secret)
+    ```
+
+1. Once `twitter_token` is part of your global environment, rtweet functions should find it. However, using this method, the token will not automatically load in future sessions (you'll need to create a token every time you start a new session).
+
+    ```{r eval=FALSE}
+    ## Search for tweets
+    rt = search_tweets("#rstats", n = 1000, token = twitter_token)
+    ## Follows a user
+    post_follow("csgillespie")
+    ```
+
+  
