@@ -13,6 +13,7 @@ output:
 
 
 ```{r}
+library(jrShiny)
 knitr::include_graphics("gosset.jpg")
 ```
 
