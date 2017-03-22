@@ -10,7 +10,7 @@ output: html_vignette
 
 ## Accessing twitter from the command line
 
-An easy way of determining when your job/script has finished, is to use twitter;
+An easy way of determining when your job/script has finished, is to use [twitter](https://twitter.com/csgillespie);
 at the end of your job, you send a tweet!
 
 The package for accessing the twitter API is [rtweet](https://github.com/mkearney/rtweet).

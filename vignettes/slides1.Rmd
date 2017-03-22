@@ -12,29 +12,6 @@ css: left.css
 -->
 
 # Overview
-## Course R package
-
-```{r eval=FALSE}
-install.packages("drat")
-drat::addRepo("rcourses")
-install.packages("jrShiny")
-library("jrShiny")## Should work
-```
-
-If that works, try and get the dependencies
-```{r eval=FALSE}
-install.packages("jrShiny", dependencies = TRUE)
-```
-
-## Who?
-
-* Dr Colin Gillespie
-* Statistics Lecturer, Newcastle University
-* Research interest in high performance and parallel computing
-  * Twitter: [csgillespie](https://twitter.com/csgillespie)
-  * Linkedin: [csgillespie](https://uk.linkedin.com/in/colin-gillespie-25028332)
-* Book: [Efficient R programming](https://github.com/csgillespie/efficientR) O'Reilly
-
 ## Slides 
 
 All slides and exercises are in the package
