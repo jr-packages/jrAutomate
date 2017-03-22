@@ -40,7 +40,7 @@ New chart panes are created using `###` and new columns (or
 ## Exercise 1
 
 ```{r eval=FALSE}
-vignette("chapter1", package="jrShiny")
+vignette("chapter3", package="jrShiny")
 ```
 
 # Sizing
@@ -58,7 +58,7 @@ vignette("chapter1", package="jrShiny")
 ## Exercise 2
 
 ```{r eval=FALSE}
-vignette("chapter1", package="jrShiny")
+vignette("chapter3", package="jrShiny")
 ```
 
 # Appearance
