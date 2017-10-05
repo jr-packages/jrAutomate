@@ -16,8 +16,8 @@ css: left.css
 
 All slides and exercises are in the package
 ```{r eval=FALSE}
-vignettes("slides1", package="jrShiny")
-vignettes("chapter1", package="jrShiny")
+vignettes("slides1", package="jrAutomate")
+vignettes("chapter1", package="jrAutomate")
 ```
 
 # Chapter 1: What is markdown?
@@ -71,7 +71,7 @@ output: html_document
 ## Exercise 1
 
 ```{r eval=FALSE}
-vignette("chapter1", package="jrShiny")
+vignette("chapter1", package="jrAutomate")
 ```
 
 # Embedded R code with `knitr`
@@ -118,7 +118,7 @@ rmarkdown::render("file.Rmd")
 ## Exercise 2
 
 ```{r eval=FALSE}
-vignette("chapter1", package="jrShiny")
+vignette("chapter1", package="jrAutomate")
 ```
 
 # Hyper Text Markup Language (HTML)
@@ -141,6 +141,6 @@ vignette("chapter1", package="jrShiny")
 ## Exercise 3
 
 ```{r eval=FALSE}
-vignette("chapter1", package="jrShiny")
+vignette("chapter1", package="jrAutomate")
 ```
 

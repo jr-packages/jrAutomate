@@ -1,9 +1,11 @@
-Package: jrShiny
+Package: jrAutomate
 Type: Package
-Title: R Shiny Exercises
-Version: 0.1.1
-Authors@R: person(given="Colin", family="Gillespie",
-    email="csgillespie@gmail.com", role = c("aut", "cre"))
+Title: R Automate Exercises
+Version: 0.1.0
+Authors@R: person(given = "Colin", 
+                  family = "Gillespie",
+                  email = "colin@jumpingrivers.com", 
+                  role = c("aut", "cre"))
 Maintainer: Colin Gillespie <csgillespie@gmail.com>
 Description: Functions and exercises for R courses. This package was initially
     based on the reportsWS package by RStudio.

@@ -14,7 +14,7 @@
 exercise = function(chapter, fname) {
   dir = paste0("chapter", chapter)
 
-  path = system.file(dir, fname, package = "jrShiny")
+  path = system.file(dir, fname, package = "jrAutomate")
   newpath = file.path(getwd(), fname)
   file.copy(path, newpath, copy.mode = FALSE)
   file.edit(newpath)
