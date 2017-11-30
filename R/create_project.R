@@ -25,9 +25,9 @@ create_project = function() {
 
   move_files(3, dest = "original") 
   move_files(3, dest = "exercises") 
-  move_files(4, dest = "original") 
-  move_files(4, dest = "exercises") 
-  
-  move_files(5, dest = "original") 
-  move_files(5, dest = "exercises") 
+  # move_files(4, dest = "original") 
+  # move_files(4, dest = "exercises") 
+  # 
+  # move_files(5, dest = "original") 
+  # move_files(5, dest = "exercises") 
 }
