@@ -11,7 +11,8 @@ Description: Functions and exercises for R courses. This package was initially
     based on the reportsWS package by RStudio.
 Depends:
     R (>= 3.3)
-Imports: utils, ggplot2movies, drat
+Imports: utils, ggplot2movies, drat, jrData
+Remotes: jr-packages/jrData
 Suggests:
     knitr,
     shiny, formattable, edgebundleR, DT,d3heatmap,networkD3, 
