@@ -1,4 +1,5 @@
 # jrAutomate
+[![Build Status](https://api.travis-ci.org/jr-packages/jrAutomate.png?branch=master)](https://travis-ci.org/jr-packages/)  
 
 ### TODO
 
