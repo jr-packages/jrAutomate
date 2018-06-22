@@ -1,14 +1,13 @@
 Package: jrAutomate
 Type: Package
 Title: R Automate Exercises
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: person(given = "Colin", 
                   family = "Gillespie",
                   email = "colin@jumpingrivers.com", 
                   role = c("aut", "cre"))
 Maintainer: Colin Gillespie <csgillespie@gmail.com>
-Description: Functions and exercises for R courses. This package was initially
-    based on the reportsWS package by RStudio.
+Description: Functions and exercises for the first steps in Shiny course.
 Depends:
     R (>= 3.3)
 Imports: utils, ggplot2movies, drat, jrData

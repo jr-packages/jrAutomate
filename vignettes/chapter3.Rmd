@@ -89,7 +89,6 @@ Create the following layouts
   * Open `chapter3/tabs.Rmd`. 
   * What does the `.tabset-fade` attribute do?
   * Alter one of your existing layouts and add a tab component
-1. Look at my [app](https://bookdown.org/csgillespie/components/) How do you think it was created?
 2. Another neat layout is [Storyboard](http://rmarkdown.rstudio.com/flexdashboard/using.html#storyboards)
   * Knit `chapter3/story.Rmd`.
   * Add an additional frame to the storyboard containing a `boxplot` of the simulated data.

@@ -16,8 +16,6 @@ library("flexdashboard")
 ## Exercise 1 (5 minutes)
 
   * Briefly explore the [showcase](http://www.htmlwidgets.org/showcase_leaflet.html) htmlwidgets. 
-  * I've also deploy a simple [app](https://bookdown.org/csgillespie/components/) This is what we
-  hope to achieve by the end of chapter 3.
 
 ## Exercise 2 (20 minutes)
 
