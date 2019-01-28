@@ -10,15 +10,15 @@ Maintainer: Colin Gillespie <csgillespie@gmail.com>
 Description: Functions and exercises for the first steps in Shiny course.
 Depends:
     R (>= 3.3)
-Imports: utils, ggplot2movies, drat, jrData
-Remotes: jr-packages/jrData
+Imports: utils, ggplot2movies, drat
 Suggests:
     knitr,
     shiny, formattable, edgebundleR, DT,d3heatmap,networkD3, 
     ggplot2, gridSVG, svgPanZoom,svglite, MASS, htmlwidgets, ggiraph, 
     sparkline, rmarkdown, flexdashboard,plotly,dygraphs, rsconnect, revealjs
 License: CC0
+Encoding: UTF-8
 LazyData: TRUE
 VignetteBuilder: knitr
 Repository: jr-packages
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1

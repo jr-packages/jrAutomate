@@ -31,7 +31,7 @@ library("svgPanZoom")
 library("svglite")## For base
 ```
 Then just wrap a base graphic function call
-```{r, message=FALSE}
+```{r, message=FALSE, eval = FALSE}
 svgPanZoom(
   svglite:::inlineSVG(
     plot(1:10)
@@ -39,7 +39,7 @@ svgPanZoom(
 )
 ```
 `ggplot2` is just as easy
-```{r, message=FALSE}
+```{r, message=FALSE, eval = FALSE}
 library("ggplot2")
 data(mtcars, package="datasets")
 #install.packages("gridSVG")

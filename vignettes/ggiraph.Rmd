@@ -10,6 +10,7 @@ output: html_vignette
 -->
   
 ```{r message=FALSE, echo=FALSE}
+library("ggplot2")
 library("ggiraph")
 gg_th <- theme(axis.ticks = element_line(colour = "gray90"), 
     panel.grid.major = element_line(colour = "gray90"), 
