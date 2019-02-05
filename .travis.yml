@@ -7,9 +7,6 @@ notifications:
 r_packages:
   - drat
 
-r_github_packages:
-  - renkun-ken/formattable
-  - htmlwidgets/sparkline
 
 before_install:
 - tlmgr install fancyvrb units
