@@ -1,0 +1,43 @@
+---
+title: "Links for the practicals"
+author: "Jumping Rivers"
+output: html_vignette
+---
+
+## Practical 1
+
+### Exercise 3
+
+1. [RStudio](http://rmarkdown.rstudio.com/revealjs_presentation_format.html)
+
+## Practical 2
+
+### Exercise 1
+
+1. [showcase](http://www.htmlwidgets.org/showcase_leaflet.html)
+
+### Exercise 2
+
+* Interactive Heat Maps: [d3heatmap](d3heatmap.html), [R](d3heatmap.R), [Rmd](d3heatmap.Rmd)
+* Interactive tables: [DT](DT.html), [R](DT.R), [Rmd](DT.Rmd)
+* Circle Plots with Bundled Edges: [edgebundleR](edgebundleR.html), [R](edgebundleR.R), [Rmd](edgebundleR.Rmd)
+* Formattable Data Structures: [formattable](formattable.html), [R](formattable.R), [Rmd](formattable.Rmd)
+* Interactive ggplot2 graphs: [ggiraph](ggiraph.html), [R](ggiraph.R), [Rmd](ggiraph.Rmd)
+* Network graphs: [networkD3](networkD3.html), [R](networkD3.R), [Rmd](networkD3.Rmd)
+* Add pan and zoom to graphics: [svgPanZoom](svgPanZoom.html), [R](svgPanZoom.R), [Rmd](svgPanZoom.Rmd)
+* jQuery Sparkline HTML Widget: [sparkline](sparkline.html), [R](sparkline.R), [Rmd](sparkline.Rmd)
+
+## Practical 3 
+
+### Exercise 3
+
+*[documentation](http://rmarkdown.rstudio.com/flexdashboard/using.html#multiple_pages)    
+*[Orientation](http://rmarkdown.rstudio.com/flexdashboard/using.html#page_orientation)    
+*[Navigation](http://rmarkdown.rstudio.com/flexdashboard/using.html#page_navigation)     
+*[Links](http://rmarkdown.rstudio.com/flexdashboard/using.html#page_links)    
+*[icons](http://rmarkdown.rstudio.com/flexdashboard/using.html#page_icons)     
+  
+### Exercise 4
+  
+*[Storyboard](http://rmarkdown.rstudio.com/flexdashboard/using.html#storyboards)
+*[Example](https://beta.rstudioconnect.com/jjallaire/htmlwidgets-showcase-storyboard/)

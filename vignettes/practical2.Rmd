@@ -1,0 +1,58 @@
+---
+title: "Practical 2"
+author: "Jumping Rivers"
+output:
+  tufte::tufte_handout:
+    latex_engine: xelatex
+  tufte::tufte_html: default
+vignette: >
+  %\VignetteIndexEntry{practical2}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r echo=FALSE, message=FALSE}
+library("jrAutomate")
+library("flexdashboard")
+```
+
+For links to any webpages, see `vignette("links", package = "jrAutomate")`
+
+## Exercise 1 (5 minutes)
+
+  * Briefly explore the [showcase](http://www.htmlwidgets.org/showcase_leaflet.html)^[See `vignette("links", package = "jrAutomate")`] htmlwidgets. 
+
+## Exercise 2 (20 minutes)
+
+Go through the following widgets. See `vignette("links", package = "jrAutomate")` for the links to each bullet point.
+
+  * Interactive Heat Maps: [d3heatmap](d3heatmap.html), [R](d3heatmap.R), [Rmd](d3heatmap.Rmd)
+  * Interactive tables: [DT](DT.html), [R](DT.R), [Rmd](DT.Rmd)
+  * Circle Plots with Bundled Edges: [edgebundleR](edgebundleR.html), [R](edgebundleR.R), [Rmd](edgebundleR.Rmd)
+  * Formattable Data Structures: [formattable](formattable.html), [R](formattable.R), [Rmd](formattable.Rmd)
+  * Interactive ggplot2 graphs: [ggiraph](ggiraph.html), [R](ggiraph.R), [Rmd](ggiraph.Rmd)
+  * Network graphs: [networkD3](networkD3.html), [R](networkD3.R), [Rmd](networkD3.Rmd)
+  * Add pan and zoom to graphics: [svgPanZoom](svgPanZoom.html), [R](svgPanZoom.R), [Rmd](svgPanZoom.Rmd)
+  * jQuery Sparkline HTML Widget: [sparkline](sparkline.html), [R](sparkline.R), [Rmd](sparkline.Rmd)
+
+Experiment with a few of the widgets on your **own** data set.
+
+## Exercise 3 (20 minutes)
+
+Open the `htmlwidgets` vignette
+
+```{r eval=FALSE}
+vignette("htmlwidgets", package="jrAutomate")
+```
+
+Explore the **other widgets** on you own data. The `plotly` framework, under _Entire plotting frameworks_ is quite nice
+
+## Exercise 4 (10 minutes)
+
+Create:
+
+  * A markdown document containing your widgets;
+  * A markdown presentation containing your widgets.
+  
+  
+  
