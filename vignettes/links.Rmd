@@ -3,6 +3,11 @@ title: "Links for the practicals"
 author: "Jumping Rivers"
 output: html_vignette
 ---
+<!--
+%\VignetteEngine{knitr::rmarkdown}
+%\VignetteIndexEntry{Chapter 1 Exercises}
+-->
+
 
 ## Practical 1
 
