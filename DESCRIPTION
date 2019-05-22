@@ -16,7 +16,7 @@ Suggests:
     shiny, formattable, edgebundleR, DT,d3heatmap,networkD3, 
     ggplot2, gridSVG, svgPanZoom,svglite, MASS, htmlwidgets, ggiraph, 
     sparkline, rmarkdown, flexdashboard,plotly,dygraphs, rsconnect, revealjs, 
-    tufte
+    tufte, formatR
 License: CC0
 Encoding: UTF-8
 LazyData: TRUE
