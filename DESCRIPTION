@@ -12,11 +12,29 @@ Depends:
     R (>= 3.3)
 Imports: utils, ggplot2movies, drat
 Suggests:
+    d3heatmap,
+    DT,
+    dygraphs,
+    edgebundleR,
+    flexdashboard,
+    formatR,
+    formattable,
+    ggiraph,
+    ggplot2,
+    gridSVG,
+    htmlwidgets,
     knitr,
-    shiny, formattable, edgebundleR, DT,d3heatmap,networkD3, 
-    ggplot2, gridSVG, svgPanZoom,svglite, MASS, htmlwidgets, ggiraph, 
-    sparkline, rmarkdown, flexdashboard,plotly,dygraphs, rsconnect, revealjs, 
-    tufte, formatR, testthat, lintr
+    MASS,
+    networkD3,
+    plotly,
+    revealjs,
+    rmarkdown,
+    rsconnect,
+    shiny,
+    sparkline,
+    svglitem,
+    svgPanZoom, 
+    tufte
 License: CC0
 Encoding: UTF-8
 LazyData: TRUE
