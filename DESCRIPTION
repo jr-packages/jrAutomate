@@ -1,7 +1,7 @@
 Package: jrAutomate
 Type: Package
 Title: R Automate Exercises
-Version: 0.1.5
+Version: 0.1.6
 Authors@R: person(given = "Colin", 
                   family = "Gillespie",
                   email = "colin@jumpingrivers.com", 
@@ -32,7 +32,7 @@ Suggests:
     rsconnect,
     shiny,
     sparkline,
-    svglitem,
+    svglite,
     svgPanZoom, 
     tufte
 License: CC0
