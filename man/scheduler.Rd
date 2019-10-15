@@ -16,7 +16,7 @@ scheduler(rmd_name, repeats = 5, time_between = 5, params = NULL)
 \item{params}{Parameters to be passed to the render script}
 }
 \description{
-A simple schedular that runs \code{rmarkdown::render()}, the number 
+A simple schedular that runs \code{rmarkdown::render()}, the number
 of times equal to \code{reports}. The time interval between calls
 is given by \code{time_between}
 }

@@ -27,7 +27,7 @@ devtools::install_github("timelyportfolio/svgPanZoom")
 
 Load the package in the usual way
 ```{r message=FALSE}
-library("svgPanZoom") 
+library("svgPanZoom")
 library("svglite")## For base
 ```
 Then just wrap a base graphic function call
@@ -35,15 +35,14 @@ Then just wrap a base graphic function call
 svgPanZoom(
   svglite:::inlineSVG(
     plot(1:10)
-  ),controlIconsEnabled=TRUE
+  ), controlIconsEnabled = TRUE
 )
 ```
 `ggplot2` is just as easy
 ```{r, message=FALSE, eval = FALSE}
 library("ggplot2")
-data(mtcars, package="datasets")
-#install.packages("gridSVG")
-d = ggplot(mtcars, aes(mpg, disp, colour=disp)) + geom_jitter() + 
+data(mtcars, package = "datasets")
+d = ggplot(mtcars, aes(mpg, disp, colour = disp)) + geom_jitter() +
   theme_bw()
 svgPanZoom(d, controlIconsEnabled = TRUE)
 ```

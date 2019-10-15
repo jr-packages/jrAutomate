@@ -11,9 +11,8 @@ move_files = function(chapter, dest) {
   file.copy(file.path(path, paste0(chapter, ".Rmd")), dest)
 }
 
-
 #' Copy files from package to script
-#' 
+#'
 #' A simple function for copying package files to users directory.
 #' @export
 create_project = function() {

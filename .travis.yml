@@ -22,7 +22,6 @@ before_script:
   - bash test_deploy.sh
   
 script:
-  - Rscript -e "inteRgrate::check_pkg()"
   - Rscript -e "inteRgrate::check_r_filenames()"
   - Rscript -e "inteRgrate::check_tidy_description()"
   - Rscript -e "inteRgrate::check_lintr()"

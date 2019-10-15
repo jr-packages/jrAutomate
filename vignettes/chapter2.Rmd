@@ -37,7 +37,7 @@ Experiment with a few of the widgets on your **own** data set.
 Open the `htmlwidgets` vignette
 
 ```{r eval=FALSE}
-vignette("htmlwidgets", package="jrAutomate")
+vignette("htmlwidgets", package = "jrAutomate")
 ```
 
 Explore the **other widgets** on you own data. The `plotly` framework, under _Entire plotting frameworks_ is quite nice

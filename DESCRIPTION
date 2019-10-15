@@ -1,16 +1,22 @@
-Package: jrAutomate
 Type: Package
+Package: jrAutomate
 Title: R Automate Exercises
 Version: 0.1.6
-Authors@R: person(given = "Colin", 
-                  family = "Gillespie",
-                  email = "colin@jumpingrivers.com", 
-                  role = c("aut", "cre"))
+Authors@R: 
+    person(given = "Colin",
+           family = "Gillespie",
+           role = c("aut", "cre"),
+           email = "colin@jumpingrivers.com")
 Maintainer: Colin Gillespie <csgillespie@gmail.com>
-Description: Functions and exercises for the first steps in Shiny course.
+Description: Functions and exercises for the first steps in
+    Shiny course.
+License: CC0
 Depends:
     R (>= 3.3)
-Imports: utils, ggplot2movies, drat
+Imports: 
+    drat,
+    ggplot2movies,
+    utils
 Suggests:
     d3heatmap,
     DT,
@@ -33,11 +39,11 @@ Suggests:
     shiny,
     sparkline,
     svglite,
-    svgPanZoom, 
+    svgPanZoom,
     tufte
-License: CC0
+VignetteBuilder: 
+    knitr
 Encoding: UTF-8
 LazyData: TRUE
-VignetteBuilder: knitr
 Repository: jr-packages
 RoxygenNote: 6.1.1

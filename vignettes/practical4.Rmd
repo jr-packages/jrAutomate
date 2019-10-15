@@ -40,7 +40,7 @@ library("flexdashboard")
 * Copy your previous Rmd file, but delete the `params` section from the YAML header
 * Pass the `filename` parameter via the `render()` function
     ```{r, eval=FALSE}
-    rmarkdown::render("MyDocument.Rmd", 
+    rmarkdown::render("MyDocument.Rmd",
       params = list(
       filename = "file2.pdf"
      )
@@ -106,7 +106,7 @@ The `scheduler()` function is simple. It has three arguments:
 ```{r, eval=FALSE}
 library(jrAutomate)
 ## time between is in seconds
-scheduler(script_name = "my_script.Rmd", repeats = 5, time_between = 5) 
+scheduler(script_name = "my_script.Rmd", repeats = 5, time_between = 5)
 ```
 
 Using the `scheduler()` function, run your `Rmd` file 5 times with a 3 second interval.

@@ -1,5 +1,5 @@
 #' Sets par parameters
-#' 
+#'
 #' Set more sensible par parameters
 #' @param mar Distance to edge
 #' @param mgp Distance from label to graph

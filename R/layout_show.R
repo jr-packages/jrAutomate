@@ -1,12 +1,12 @@
 #' Show complex layouts
-#' 
+#'
 #' Tweak to \code{layout.show} to allow text size to be displayed.
 #' @param n number of figures to plot.
 #' @param cex text size
 #' @param text Text to print
 #' @importFrom graphics box plot.new text
 #' @export
-layout_show = function (n = 1, cex=1, text = NULL){
+layout_show = function(n = 1, cex=1, text = NULL) {
   if (is.null(text)) text = paste0("Chart ", seq_len(n))
   oma.saved <- par("oma")
   par(oma = rep.int(0, 4))

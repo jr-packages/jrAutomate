@@ -1,6 +1,6 @@
 #' The famous Jumping Rivers Scheduler
-#' 
-#' A simple schedular that runs \code{rmarkdown::render()}, the number 
+#'
+#' A simple schedular that runs \code{rmarkdown::render()}, the number
 #' of times equal to \code{reports}. The time interval between calls
 #' is given by \code{time_between}
 #' @param rmd_name A Rmd file
