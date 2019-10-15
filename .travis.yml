@@ -1,5 +1,9 @@
 language: r
 cache: packages
+env:
+  global:
+    - ALLOWED_WARNINGS=3
+    - ALLOWED_NOTES=3
 
 notifications:
   email:

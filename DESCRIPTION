@@ -1,7 +1,7 @@
 Type: Package
 Package: jrAutomate
 Title: R Automate Exercises
-Version: 0.1.6
+Version: 0.1.7
 Authors@R: 
     person(given = "Colin",
            family = "Gillespie",
