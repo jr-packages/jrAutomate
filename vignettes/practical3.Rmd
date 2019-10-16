@@ -9,7 +9,7 @@ vignette: >
   %\VignetteIndexEntry{practical3}
   %\VignetteEngine{knitr::rmarkdown}
   \usepackage[utf8]{inputenc}
-  ---
+---
   
 ```{r echo=FALSE, message=FALSE}
   library("jrAutomate")
