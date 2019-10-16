@@ -6,35 +6,35 @@ output:
     latex_engine: xelatex
   tufte::tufte_html: default
 vignette: >
-%\VignetteIndexEntry{practical3}
+  %\VignetteIndexEntry{practical3}
   %\VignetteEngine{knitr::rmarkdown}
   \usepackage[utf8]{inputenc}
   ---
   
-  ```{r echo=FALSE, message=FALSE}
-library("jrAutomate")
-library("flexdashboard")
+```{r echo=FALSE, message=FALSE}
+  library("jrAutomate")
+  library("flexdashboard")
 ```
-
-For links to any webpages, see `vignette("links", package = "jrAutomate")`
-
-## Exercise 1 (15 minutes)
-
-1. Open `exercises/chapter3/single_column_fill.Rmd` and Knit. 
-* Add two additional charts to get the following layout
-
-```{r echo=FALSE, fig.height=2, fig.width=2}
-layout(matrix(c(1:4), 4, 1, byrow = TRUE))
-layout_show(4, 2)
-```
-1. What is the difference between `Column (fill)` and `Column (scroll)`. 
-Hint: create a dashboard with $6$ charts for `fill` and `scroll`
-
-1. Open `exercises/chapter3/row.Rmd`. Recreate the following layouts
-
-*  Layout 1
-
-```{r echo=FALSE, fig.height=2, fig.width=2}
+  
+  For links to any webpages, see `vignette("links", package = "jrAutomate")`
+  
+  ## Exercise 1 (15 minutes)
+  
+  1. Open `exercises/chapter3/single_column_fill.Rmd` and Knit. 
+  * Add two additional charts to get the following layout
+  
+  ```{r echo=FALSE, fig.height=2, fig.width=2}
+  layout(matrix(c(1:4), 4, 1, byrow = TRUE))
+  layout_show(4, 2)
+  ```
+  1. What is the difference between `Column (fill)` and `Column (scroll)`. 
+  Hint: create a dashboard with $6$ charts for `fill` and `scroll`
+  
+  1. Open `exercises/chapter3/row.Rmd`. Recreate the following layouts
+  
+  *  Layout 1
+  
+  ```{r echo=FALSE, fig.height=2, fig.width=2}
 layout(matrix(c(1:4), 2, 2, byrow = TRUE))
 layout_show(4, 1)
 ```
